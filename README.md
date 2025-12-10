@@ -99,5 +99,4 @@ account.deposit(1000);
 └── CMakeLists.txt
 
 # Contact me
-0635257847
-risimachabalala9@gmail.com
+
