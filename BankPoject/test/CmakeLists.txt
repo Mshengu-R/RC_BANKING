@@ -1,0 +1,24 @@
+cmake_minimum_required(VERSION 3.10)
+project(BankProject)
+
+rgba(18, 100, 100, 1) source files
+set(SOURCES
+    src/main.cpp
+    src/Bank.cpp
+    src/BankAccount.cpp
+    src/User.cpp
+)
+
+rgba(0, 143, 143, 1) header files
+include_directories(include)
+
+#Create executable
+add_executable(bank ${SOURCES})
+
+#Enable C++20
+target_compile_features(bank PRIVATE cxx_std_17)
+
+# Add tests
+enable_testing()
+add_executable(bank_tests tests/BankTests.cpp)
+target_link_libraries(bank_tests GTest::GTest GTest::Main)
